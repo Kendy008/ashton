@@ -152,7 +152,8 @@
   .interest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
   .interest-item{border:1px solid var(--line);background:var(--paper-card);padding:18px;}
   .interest-item h4{font-family:'Space Grotesk',sans-serif;font-size:1rem;margin-bottom:6px;}
-  .interest-image{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin:10px 0 12px;border:1px solid var(--line);}
+  .interest-photo-gallery{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px;}
+  .interest-image{display:block;width:calc(50% - 4px);height:auto;object-fit:contain;border:1px solid var(--line);}
   .interest-item p{font-size:0.88rem;color:var(--text-sub);}
   .drone-showcase{margin-top:42px;border-top:1px solid var(--line);padding-top:28px;}
   .drone-showcase h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;margin-bottom:16px;color:var(--blueprint-navy-deep);}
@@ -365,7 +366,7 @@
     <div class="sec-head"><span class="sec-num mono">06</span><h2>興趣與專長</h2></div>
     <div class="interest-grid">
       <div class="interest-item"><h4>無人機攝影</h4><p>喜歡操作無人機拍攝，透過空拍視角記錄活動、風景與生活中的精彩畫面。</p></div>
-      <div class="interest-item"><h4>釣魚</h4><img class="interest-image" src="mywork/20250823墨爾本釣魚.jpg" alt="2025 年 8 月全家在墨爾本菲利浦灣釣魚的生活照片"><p>喜歡親近自然，在釣魚過程中培養耐心、專注力與觀察環境的能力。2025 年 8 月與家人前往澳洲墨爾本菲利浦灣釣魚，留下難忘的生活紀錄。</p></div>
+      <div class="interest-item"><h4>釣魚</h4><div class="interest-photo-gallery"><img class="interest-image" src="mywork/20250823墨爾本釣魚.jpg" alt="2025 年 8 月全家在墨爾本菲利浦灣釣魚的生活照片"><img class="interest-image" src="mywork/20250823墨爾本釣魚-1.jpg" alt="2025 年 8 月全家在墨爾本菲利浦灣釣魚的生活照片 2"></div><p>喜歡親近自然，在釣魚過程中培養耐心、專注力與觀察環境的能力。2025 年 8 月與家人前往澳洲墨爾本菲利浦灣釣魚，留下難忘的生活紀錄。</p></div>
       <div class="interest-item"><h4>攝影紀錄</h4><p>喜歡用影像保存活動與生活中的重要時刻，持續累積構圖與影像紀錄經驗。</p></div>
     </div>
     <div class="drone-showcase">
