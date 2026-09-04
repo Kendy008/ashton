@@ -129,6 +129,17 @@
   .cert-item h3{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;margin-bottom:6px;}
   .cert-item p{font-size:0.92rem;color:var(--text-main);}
 
+  /* ---------- Volunteer timeline ---------- */
+  .timeline{position:relative;margin-left:70px;border-left:2px solid var(--blueprint-navy);}
+  .timeline-item{position:relative;padding:0 0 30px 34px;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-item::before{content:"";position:absolute;left:-8px;top:4px;width:14px;height:14px;background:var(--accent);border:3px solid var(--paper);outline:1px solid var(--accent);}
+  .timeline-date{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--accent);margin-bottom:4px;}
+  .timeline-item h3{font-family:'Space Grotesk',sans-serif;font-size:1.08rem;margin-bottom:6px;}
+  .timeline-item p{font-size:0.92rem;max-width:70ch;}
+  .timeline-docs{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;}
+  .timeline-docs img{display:block;width:min(100%,520px);height:auto;border:1px solid var(--line);background:var(--paper-card);}
+
   /* ---------- Reflections ---------- */
   .reflect-entry{padding:22px 0;border-top:1px solid var(--line);}
   .reflect-entry:first-child{border-top:none;}
@@ -141,6 +152,10 @@
   .interest-item{border:1px solid var(--line);background:var(--paper-card);padding:18px;}
   .interest-item h4{font-family:'Space Grotesk',sans-serif;font-size:1rem;margin-bottom:6px;}
   .interest-item p{font-size:0.88rem;color:var(--text-sub);}
+  .drone-showcase{margin-top:42px;border-top:1px solid var(--line);padding-top:28px;}
+  .drone-showcase h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;margin-bottom:16px;color:var(--blueprint-navy-deep);}
+  .drone-video{width:min(100%,360px);aspect-ratio:9/16;background:#000;overflow:hidden;}
+  .drone-video iframe{display:block;width:100%;height:100%;border:0;}
 
   /* ---------- Dev log ---------- */
   .devlog{border-left:2px solid var(--blueprint-navy);padding-left:26px;display:flex;flex-direction:column;gap:26px;}
@@ -191,9 +206,10 @@
   <a href="#about">01 關於我</a>
   <a href="#portfolio">02 作品集</a>
   <a href="#certs">03 證照</a>
-  <a href="#reflections">04 學習心得</a>
-  <a href="#interests">05 興趣專長</a>
-  <a href="#devlog">06 網站開發日誌</a>
+  <a href="#volunteer">04 志工服務</a>
+  <a href="#reflections">05 學習心得</a>
+  <a href="#interests">06 興趣專長</a>
+  <a href="#devlog">07 網站開發日誌</a>
 </nav>
 
 <main>
@@ -266,7 +282,8 @@
         <div class="cert-badge">丙級<br>電子</div>
         <div>
           <h3>電子 技術士證照</h3>
-          <p>寫下準備過程：為什麼考、練習時最卡關的項目、如何克服、考取後對後續學習的影響。取得日期待填。</p>
+          <p>2025 年 6 月取得工業電子丙級技術士證，寫下準備過程、練習時最卡關的項目、如何克服，以及考取後對後續學習的影響。</p>
+          <div class="timeline-docs"><img src="mywork/20250603-(林彥戎) 工業電子丙級技術士證.jpg" alt="工業電子丙級技術士證"></div>
         </div>
       </div>
       <div class="cert-item">
@@ -279,8 +296,57 @@
     </div>
   </section>
 
+  <section id="volunteer">
+    <div class="sec-head"><span class="sec-num mono">04</span><h2>志工服務與活動紀錄</h2></div>
+    <p style="margin-bottom:28px;color:var(--text-sub);max-width:70ch;">以下依服務日期整理校內、校外志工與攝影活動紀錄，並直接展示已取得的服務證明書或相關文件照片。</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025-08-30｜9 小時</div>
+        <h3>童樂奇遇冒險志工日</h3>
+        <p>參與校外志工活動，協助活動進行與服務工作，培養與不同對象溝通及合作的能力。</p>
+        <div class="timeline-docs"><img src="mywork/20250830-(林彥戎) 童樂奇遇冒險 9H 志工日證書.png" alt="童樂奇遇冒險 9H 志工日證書"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2025-09-13｜4 小時</div>
+        <h3>聖愛山莊淨山公益服務</h3>
+        <p>參與淨山行動，實際投入環境服務，從行動中理解維護自然環境與公共責任的重要性。</p>
+        <div class="timeline-docs"><img src="mywork/20250913-(林彥戎) 聖愛山莊淨山 4H 公益服務志工證明.jpg" alt="聖愛山莊淨山 4H 公益服務志工證明"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026-04-11｜4 小時</div>
+        <h3>淨灘志工服務</h3>
+        <p>參與淨灘志工服務，協助清理海岸環境並與團隊分工合作，持續累積公共服務經驗。</p>
+        <div class="timeline-docs"><img src="mywork/20260411- (林彥戎) 淨灘志工服務證明(4H).jpg" alt="淨灘志工服務證明 4 小時"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026-05-20</div>
+        <h3>公務團隊攝影組員</h3>
+        <p>擔任公務團隊攝影組員，協助記錄學校活動與比賽過程，整理影像資料並支援活動成果保存；因認真負責表現優異而取得服務證明書。</p>
+        <div class="timeline-docs"><img src="mywork/20260520-(機加一乙 林彥戎) 公務團隊-攝影組員 認真負責表現優異(服務證明書).jpg" alt="公務團隊攝影組員服務證明書"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026-05-20</div>
+        <h3>攝影社文書股長</h3>
+        <p>擔任攝影社文書股長，協助社團資料整理與活動紀錄，培養行政組織、溝通協調及影像紀錄能力；因認真負責表現優異而取得服務證明書。</p>
+        <div class="timeline-docs"><img src="mywork/20260520-(機加一乙 林彥戎) 攝影社文書股長 認真負責表現優異(服務證明書).jpg" alt="攝影社文書股長服務證明書"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026-08-20 至 2026-08-21｜12 小時</div>
+        <h3>新生始業輔導營活動</h3>
+        <p>參與學校新生始業輔導營，協助活動執行與新生引導，透過團隊服務學習承擔責任並支援校內大型活動。</p>
+        <div class="timeline-docs"><img src="mywork/20260820~21-(機加二乙 林彥戎) -新生始業輔導營活動(12H服務證明書).jpg" alt="新生始業輔導營活動 12 小時服務證明書"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2026-08-29｜9 小時</div>
+        <h3>志工服務</h3>
+        <p>參與志工服務活動，完成 9 小時服務，持續累積校外服務經驗與團隊合作能力。</p>
+        <div class="timeline-docs"><img src="mywork/20260829 - (林彥戎) 志工服務證明(9H).jpg" alt="志工服務證明 9 小時"></div>
+      </div>
+    </div>
+  </section>
+
   <section id="reflections">
-    <div class="sec-head"><span class="sec-num mono">04</span><h2>學習心得</h2></div>
+    <div class="sec-head"><span class="sec-num mono">05</span><h2>學習心得</h2></div>
     <div class="reflect-entry">
       <div class="reflect-date mono">2026-XX-XX</div>
       <h3>心得標題待填</h3>
@@ -294,16 +360,22 @@
   </section>
 
   <section id="interests">
-    <div class="sec-head"><span class="sec-num mono">05</span><h2>興趣與專長</h2></div>
+    <div class="sec-head"><span class="sec-num mono">06</span><h2>興趣與專長</h2></div>
     <div class="interest-grid">
-      <div class="interest-item"><h4>興趣項目待填</h4><p>簡短描述，例如自學的軟體、參加的社團、課外接觸的技能。</p></div>
-      <div class="interest-item"><h4>興趣項目待填</h4><p>簡短描述。</p></div>
-      <div class="interest-item"><h4>興趣項目待填</h4><p>簡短描述。</p></div>
+      <div class="interest-item"><h4>無人機攝影</h4><p>喜歡操作無人機拍攝，透過空拍視角記錄活動、風景與生活中的精彩畫面。</p></div>
+      <div class="interest-item"><h4>釣魚</h4><p>喜歡親近自然，在釣魚過程中培養耐心、專注力與觀察環境的能力。</p></div>
+      <div class="interest-item"><h4>攝影紀錄</h4><p>喜歡用影像保存活動與生活中的重要時刻，持續累積構圖與影像紀錄經驗。</p></div>
+    </div>
+    <div class="drone-showcase">
+      <h3>無人機攝影作品集展示</h3>
+      <div class="drone-video">
+        <iframe src="https://www.youtube.com/embed/qdDMtH-0ce4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=qdDMtH-0ce4&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="無人機攝影作品集" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
     </div>
   </section>
 
   <section id="devlog">
-    <div class="sec-head"><span class="sec-num mono">06</span><h2>網站開發日誌</h2></div>
+    <div class="sec-head"><span class="sec-num mono">07</span><h2>網站開發日誌</h2></div>
     <p style="margin-bottom:24px;color:var(--text-sub);max-width:65ch;">這個網站本身也是學習歷程的一部分：以下記錄每次改版的動機、遇到的問題與解法，可直接作為「自主學習」與「資訊能力」的多元表現佐證。</p>
     <div class="devlog">
       <div class="devlog-entry">
