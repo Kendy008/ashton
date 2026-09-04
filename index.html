@@ -154,8 +154,8 @@
   .interest-item p{font-size:0.88rem;color:var(--text-sub);}
   .drone-showcase{margin-top:42px;border-top:1px solid var(--line);padding-top:28px;}
   .drone-showcase h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;margin-bottom:16px;color:var(--blueprint-navy-deep);}
-  .drone-video{width:min(100%,360px);aspect-ratio:9/16;background:#000;overflow:hidden;}
-  .drone-video iframe{display:block;width:100%;height:100%;border:0;}
+  .drone-video{position:relative;width:min(100%,640px);aspect-ratio:16/9;background:#000;overflow:hidden;}
+  .drone-video iframe{position:absolute;top:-16%;left:0;display:block;width:100%;height:132%;border:0;}
 
   /* ---------- Dev log ---------- */
   .devlog{border-left:2px solid var(--blueprint-navy);padding-left:26px;display:flex;flex-direction:column;gap:26px;}
@@ -369,7 +369,7 @@
     <div class="drone-showcase">
       <h3>無人機攝影作品集展示</h3>
       <div class="drone-video">
-        <iframe src="https://www.youtube.com/embed/qdDMtH-0ce4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=qdDMtH-0ce4&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="無人機攝影作品集" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe src="https://www.youtube.com/embed/qdDMtH-0ce4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=qdDMtH-0ce4&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="無人機攝影作品集" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
   </section>
