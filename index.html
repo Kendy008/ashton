@@ -153,13 +153,16 @@
   .interest-item{border:1px solid var(--line);background:var(--paper-card);padding:18px;}
   .interest-item h4{font-family:'Space Grotesk',sans-serif;font-size:1rem;margin-bottom:6px;}
   .interest-photo-gallery{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px;}
-  .interest-image{display:block;width:calc(50% - 4px);height:auto;object-fit:contain;border:1px solid var(--line);}
+  .interest-image{display:block;width:calc(50% - 4px);height:auto;object-fit:contain;border:1px solid var(--line);cursor:zoom-in;}
   .interest-image-single{width:100%;margin:10px 0 12px;}
   .interest-item p{font-size:0.88rem;color:var(--text-sub);}
   .drone-showcase{margin-top:42px;border-top:1px solid var(--line);padding-top:28px;}
   .drone-showcase h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;margin-bottom:16px;color:var(--blueprint-navy-deep);}
   .drone-video{position:relative;width:min(100%,640px);aspect-ratio:16/9;background:#000;overflow:hidden;}
   .drone-video iframe{position:absolute;top:-16%;left:0;display:block;width:100%;height:132%;border:0;}
+  .photo-lightbox{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(18,38,54,0.92);cursor:zoom-out;}
+  .photo-lightbox.is-open{display:flex;}
+  .photo-lightbox img{display:block;max-width:94vw;max-height:94vh;width:auto;height:auto;object-fit:contain;}
 
   /* ---------- Dev log ---------- */
   .devlog{border-left:2px solid var(--blueprint-navy);padding-left:26px;display:flex;flex-direction:column;gap:26px;}
@@ -400,6 +403,43 @@
 <footer>
   © 2026 林彥戎 — 學習歷程檔案｜以 HTML/CSS 手工打造
 </footer>
+
+<div class="photo-lightbox" role="dialog" aria-modal="true" aria-label="照片放大檢視">
+  <img src="" alt="">
+</div>
+
+<script>
+  const lightbox = document.querySelector('.photo-lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+
+  document.querySelectorAll('.interest-image').forEach((image) => {
+    image.tabIndex = 0;
+    const openLightbox = () => {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.classList.add('is-open');
+    };
+    image.addEventListener('click', openLightbox);
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox();
+      }
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('is-open');
+    lightboxImage.src = '';
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      lightbox.classList.remove('is-open');
+      lightboxImage.src = '';
+    }
+  });
+</script>
 
 </body>
 </html>
