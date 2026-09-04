@@ -37,7 +37,24 @@
     margin:24px;
     background:var(--paper-card);
     display:grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 180px 1.3fr 1fr;
+  }
+  .tb-photo{
+    border-right:2px solid var(--blueprint-navy);
+    display:flex;align-items:center;justify-content:center;
+    padding:20px;
+  }
+  .tb-photo img{
+    width:140px;height:140px;object-fit:contain;object-position:center;
+    border:1px solid var(--blueprint-navy);
+    display:block;
+  }
+  .tb-photo .photo-placeholder{
+    width:140px;height:140px;
+    border:1px dashed var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;
+    color:var(--text-sub);text-align:center;padding:8px;
   }
   .tb-main{padding:36px 40px;border-right:2px solid var(--blueprint-navy);}
   .tb-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;letter-spacing:0.02em;color:var(--accent);margin-bottom:10px;}
@@ -143,6 +160,7 @@
 
   @media(max-width:720px){
     header.titleblock{grid-template-columns:1fr;margin:12px;}
+    .tb-photo{border-right:none;border-bottom:2px solid var(--blueprint-navy);}
     .tb-main{border-right:none;border-bottom:2px solid var(--blueprint-navy);}
     #about .about-grid{grid-template-columns:1fr;}
     .cert-item{grid-template-columns:1fr;}
@@ -152,6 +170,9 @@
 <body>
 
 <header class="titleblock">
+  <div class="tb-photo">
+    <img src="mywork/202502.jpg" alt="林彥戎的照片" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'photo-placeholder',textContent:'請放入 202502.jpg'}))">
+  </div>
   <div class="tb-main">
     <div class="tb-eyebrow">LEARNING PORTFOLIO / 學習歷程檔案</div>
     <h1>林彥戎</h1>
